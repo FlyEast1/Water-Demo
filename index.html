@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monstrum Water Viewer</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function detectAndRedirect() {
+      var userAgent = navigator.userAgent;
+      
+      if (/android/i.test(userAgent)) {
+        window.location.href = "https://example.com/android";
+      } else if (/iPhone|iPad/i.test(userAgent)) {
+        window.location.href = "https://example.com/apple";
+      } else {
+        window.location.href = "https://example.com/default";
+      }
+    }
+  </script>
+  
+</head>
+<body>
+  <h1>Welcome to the Water Demo</h1>
+  <script>
+    detectAndRedirect();
+  </script>
+  <!-- Alternatively, you can display an error message on the page -->
+  <!-- <div id="message">Redirecting...</div> -->
+</body>
+</html>
