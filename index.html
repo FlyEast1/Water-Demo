@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Monstrum Water Viewer</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function detectAndRedirect() {
-      var userAgent = navigator.userAgent;
-      
-      if (/android/i.test(userAgent)) {
-        window.location.href = "https://example.com/android";
-      } else if (/iPhone|iPad/i.test(userAgent)) {
-        window.location.href = "https://example.com/apple";
-      } else {
-        window.location.href = "https://example.com/default";
-      }
-    }
-  </script>
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to the Water Demo</h1>
-  <script>
-    detectAndRedirect();
-  </script>
-  <!-- Alternatively, you can display an error message on the page -->
-  <!-- <div id="message">Redirecting...</div> -->
+    <h1>Hello</h1>
+    <script>
+        // Function to detect the user agent and redirect accordingly
+        function detectAndRedirect() {
+          var userAgent = navigator.userAgent;
+          
+          if (/android/i.test(userAgent)) {
+            // Redirect for Android devices
+            window.location.href = "https://example.com/android";
+          } else if (/iPhone|iPad/i.test(userAgent)) {
+            // Redirect for Apple devices
+            window.location.href = "https://example.com/apple";
+          } else {
+            // Redirect for other devices or show an error message
+            window.location.href = "https://example.com/default";
+            // Alternatively, you can display an error message on the page
+            // document.getElementById("message").innerHTML = "Unsupported device";
+          }
+        }
+        detectAndRedirect();
+      </script>
 </body>
 </html>
